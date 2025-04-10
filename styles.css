@@ -1,0 +1,253 @@
+/* Colores originales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efecto de carga */
+#loader {
+  position: fixed;
+  z-index: 1000;
+  background: #121212;
+  color: #ffcc00;
+  font-size: 3rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+body.loaded #loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.loaded main,
+body.loaded header,
+body.loaded footer {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+main,
+header,
+footer {
+  opacity: 0;
+}
+
+/* Productos */
+.products {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product {
+  width: 280px;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #121212;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer .social-icons a img {
+  height: 25px;
+  margin-right: 10px;
+}
+
+.footer-right h3 {
+  margin-bottom: 10px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 60%;
+  height: auto;
+}
+/* Estilo base para los productos */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+/* Cada tarjeta de producto */
+.product {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.product p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product .price {
+  font-size: 18px;
+  color: #008f57;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product .price del {
+  color: #999;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* Estilo para botón de compra */
+.product button {
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #d3e014, #128c7e);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.product button:hover {
+  background: linear-gradient(90deg, #128c7e, #25d366);
+}
+
+body {
+  background: linear-gradient(to bottom right, #f1f4f9, #dff1e1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
